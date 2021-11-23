@@ -1,7 +1,22 @@
+
 x.x.x Release notes (yyyy-MM-dd)
 =============================================================
 ### Enhancements
-* None.
+* A new mode `discardLocal` for client reset is introduce. The old behavior is supported (but deprecated) through the `manual` mode. The new mode will discard any local changes, and a fresh copy of the Realm will be downloaded. An example of the configuration:
+
+```js
+const config = {
+  // ...
+  sync: {
+    // ...
+    clientReset: {
+      mode: "discardLocal",
+      clientResyncBefore: (localRealm, remoteRealm) => { /* ... */ },
+      clientResyncAfter: (localRealm) => { /* ... */ },
+    },
+  },
+};
+```
 
 ### Fixed
 * <How to hit and notice issue? what was the impact?> ([#????](https://github.com/realm/realm-js/issues/????), since v?.?.?)
