@@ -11,8 +11,8 @@ const config = {
     // ...
     clientReset: {
       mode: "discardLocal",
-      clientResyncBefore: (localRealm, remoteRealm) => { /* ... */ },
-      clientResyncAfter: (localRealm) => { /* ... */ },
+      clientResyncBefore: (realm) => { /* ... */ },
+      clientResyncAfter: (beforeRealm, afterRealm) => { /* ... */ },
     },
   },
 };
