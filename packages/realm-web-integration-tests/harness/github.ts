@@ -31,7 +31,7 @@ async function startServer() {
       "--name",
       "mongodb-realm-test-server",
       "--publish=9090:9090",
-      `docker.pkg.github.com/realm/ci/mongodb-realm-test-server:${IMAGE_TAG}`,
+      `ghcr.io/realm/ci/mongodb-realm-test-server:${IMAGE_TAG}`,
     ],
     { stdio: ["ignore", "pipe", "inherit"] },
   );
@@ -53,7 +53,7 @@ async function startServer() {
     process.exit(1);
   });
   // Start reading the STDOUT to determine when the container is ready for connections
-  return new Promise((resolve, reject) => {
+  return new Promise<void>((resolve, reject) => {
     let output = "";
     /**
      * Handle standard output by looking for a started "Stitch" service.
