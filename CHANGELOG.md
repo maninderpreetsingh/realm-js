@@ -2,7 +2,7 @@
 x.x.x Release notes (yyyy-MM-dd)
 =============================================================
 ### Enhancements
-* A new mode `discardLocal` for client reset is introduce. The old behavior is supported (but deprecated) through the `manual` mode. The new mode will discard any local changes, and a fresh copy of the Realm will be downloaded. An example of the configuration:
+* A new mode `discardLocal` for client reset has been introduced. The old behavior is supported (but deprecated) through the `manual` mode. The new mode will discard any local changes, and a fresh copy of the Realm will be downloaded. An example of the configuration:
 
 ```js
 const config = {
